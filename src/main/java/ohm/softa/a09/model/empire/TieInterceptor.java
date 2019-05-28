@@ -1,12 +1,13 @@
 package ohm.softa.a09.model.empire;
 
 import ohm.softa.a09.model.Fighter;
+import ohm.softa.a09.model.Flyweight;
 import ohm.softa.a09.model.Force;
 import javafx.scene.image.Image;
 
 public class TieInterceptor extends Fighter {
 
-	public TieInterceptor(String pilot, Image fighterImage) {
+	public TieInterceptor(String pilot, Flyweight fighterImage) {
 		super(pilot, fighterImage);
 	}
 

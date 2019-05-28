@@ -4,6 +4,8 @@ import javafx.scene.image.Image;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+
+
 /**
  * @author Peter Kurfer
  */
@@ -11,11 +13,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public abstract class Fighter {
 
 	private final String pilot;
-	private final Image fighterImage;
+	private final Flyweight flyweight;
 
-	public Fighter(String pilot, Image fighterImage) {
+	public Fighter(String pilot, Flyweight flyweight) {
 		this.pilot = pilot;
-		this.fighterImage = fighterImage;
+		this.flyweight = flyweight;
 	}
 
 	public String getPilot() {
@@ -23,7 +25,7 @@ public abstract class Fighter {
 	}
 
 	public Image getFighterImage() {
-		return fighterImage;
+		return flyweight.getImage();
 	}
 
 	public abstract Force getSideOfForce();

@@ -6,6 +6,8 @@ import javafx.collections.ObservableList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Random;
@@ -78,7 +80,7 @@ public final class FighterGenerator implements Runnable {
 				}
 				logger.debug("Fighter generator going to sleep now...");
 				Thread.sleep(random.nextInt(200));
-			} catch (InterruptedException e) {
+			} catch (InterruptedException | IOException | URISyntaxException e) {
 				logger.info("Got interrupted, exiting now.");
 				return;
 			}
